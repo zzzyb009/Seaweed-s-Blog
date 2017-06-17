@@ -1,0 +1,106 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-23 23:48:48
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-05-25 12:18:35
+*/
+/* 列表的样式 */
+.main .userList table tr th{
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: 1px solid lightgray;
+	padding: 8px;
+}
+.main .userList table tr td {
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 1px solid lightgray;
+	padding: 8px;
+}
+/* 按钮的样式 */
+.main .userList table tr td i{
+	padding: 5px;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	transition: background .25s linear;
+}
+.main .userList table tr td .icon-edit{
+	background: yellowgreen;
+}
+.main .userList table tr td .icon-edit:hover{
+	background: greenyellow;
+}
+.main .userList table tr td .icon-trash{
+	background: lightcoral;
+}
+.main .userList table tr td .icon-trash:hover{
+	background: #e65858;
+}
+/* 定义弹窗的表哥的样式 */
+section table tr td {
+	padding: 4px 8px;
+}
+section table tr td input{
+	height: 30px;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+	width: 100%;
+	transition: border-bottom .25s linear;
+}
+section table tr td input:focus{
+	border-bottom: 1px solid yellowgreen;
+}
+section table tr td:first-child{
+	text-align: center;
+}
+.main #dialog-content{
+	padding: 0;
+}
+/* 增加用户 */
+.main .addUser form p {
+	padding: 8px;
+}
+.main .addUser form p input{
+	padding: 3px 10px;
+	width: 50%;
+	transition: all .25s linear;
+	border: 1px solid lightgray;
+}
+.main .addUser form p input:focus{
+	border: 1px solid lightskyblue;
+	box-shadow: 0 0 1px #66afe9;
+}
+.main .addUser form p input[type=submit], .main .addUser form p input[type=reset] {
+	margin-left: 20px;
+	border: none;
+	width: 50px;
+	height: 30px;
+	transition: background .25s linear;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.main .addUser form p input[type=submit]{
+	background: yellowgreen;
+}
+.main .addUser form p input[type=submit]:hover{
+	background: greenyellow;
+}
+.main .addUser form p input[type=reset]{
+	background: lightcoral;
+}
+.main .addUser form p input[type=reset]:hover{
+	background: #e65858;
+}
+.main .addUser form p select {
+	margin-left: 0;
+	padding: 3px 10px;
+	width: 50%;
+}
+.main .addUser form p span{
+	display: inline-block;
+	font-size: 12px;
+	width: 80px;
+	text-align: center;
+}

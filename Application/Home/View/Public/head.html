@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Seaweed's web</title>
+        <link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.dialogBox.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/public.css">
+    </head>
+    <body>
+        <div id="marks"></div>
+        <div id="dialog-content"></div>
+        <div id="simple-dialogBox"></div>
+        <div id="LoginDiv">
+            <h6><i class="icon-ban-circle" alt="关闭"></i></h6>
+            <iframe name="QQlogins" id="QQlogins"></iframe>
+        </div>
+        <header class="header">
+            <img src="{$WebInfo.0.weblogo}" alt="Seaweed's Web">
+            <span>{$WebInfo.0.webname}</span>
+            <ul>
+                <!-- <li><a href="javascript:;" class="amouseon">首页</a></li> -->
+                <li><a href="{:U('Home/Index/index')}">首页</a></li>
+                <li><a href="{:U('Home/Article/articlelist')}">文章</a></li>
+                <li><a href="{:U('Home/Message/message')}">留言</a></li>
+                <li id="userInfo">
+                    <if condition="empty( $Think.session.nickname )"><a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101401635&redirect_uri=http://localhost/index.php/Home/QQLogin/callBack&state=123&scope=get_user_info" id="QQLogin" target="QQlogins"><img src="__PUBLIC__/images/Connect_logo_1.png" style="width: 16px;height: 16px;float: left;margin:25px 0;">QQ登录</a>
+                    <else /><a href="javascript:;">{$Think.session.nickname}<img src="{$Think.session.avatar}" id="avatar"></a><i class="icon-ban-circle"></i>
+                    </if>
+                </li>
+            </ul>
+    	</header><!-- /header -->
+    </body>
+    <script type="text/javascript">
+        let checkQQLoginUrl = "{:U('Home/QQLogin/checkLogin')}"
+        let qqLogoutUrl = "{:U('Home/QQLogin/qqlogout')}";
+        let makeCommentUrl = "{:U('Home/Article/makeComment')}"
+        let answerCommentUrl = "{:U('Home/Article/answerComment')}";
+        let leaveMessageUrl ="{:U('Home/Message/leaveMessage')}";
+        let answerMessageUrl ="{:U('Home/Message/answerMessage')}";
+        
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<!--     <script type="text/javascript" src="__PUBLIC__/js/jquery.dialogBox.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/public.js"></script> -->
+</html>

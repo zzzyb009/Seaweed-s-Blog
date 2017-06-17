@@ -1,0 +1,57 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-05 23:30:17
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-05-28 10:17:14
+*/
+html, body, h1, h2, h3, h4, h6, p, div, select, option, label, span, img, table, tbody, tr, th, td, input, ol, ul, li, a, small, prev, textarea, header, footer, i, form, select, option{margin: 0;padding: 0;list-style: none;font-family: 'Microsoft Yahei';font-weight: lighter;box-sizing:border-box;}
+body {
+	background: #f1f2f0;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+input,select{
+	outline: none;
+}
+
+textarea{
+	outline: none;
+}
+table{
+	width: 100%;
+}
+i{
+	margin-right: 5px;
+}
+/* 特定的class的样式 */
+.none{
+	display: none;
+	padding:0;
+}
+
+/* main class的一些样式 */
+.main{
+	width: 98%;
+	background: white;
+	margin: 15px auto;
+}
+.main h3 {
+	background: #292929;
+	padding: 10px 0 10px 0;
+	color: yellowgreen;
+	text-indent: 15px;
+	font-size: 16px;
+}
+.main>div{
+	padding: 15px;
+	font-size: 14px;
+}
+/* 修改弹窗的样式 */
+section >div{
+	padding: 0;
+}
+.main .dialog-box-title{
+	padding: 0 10px 0 10px;
+}

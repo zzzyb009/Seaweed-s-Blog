@@ -1,0 +1,22 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-24 15:55:53
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-05-31 18:38:45
+*/
+.main .articleList ul li{
+	transition: all .25s linear;
+}
+.main .articleList ul li:hover{
+	padding-left: 15px;
+	background: #E9FED3;
+	border-radius: 15px;
+}
+.main .articleList ul li a{
+	display: inline-block;
+	width: 100%;
+	padding: 8px;
+}
+.main .articleList ul li a:hover{
+	color: yellowgreen;
+}

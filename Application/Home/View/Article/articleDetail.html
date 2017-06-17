@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Seaweed's web</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/ckeditor/contents.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/public.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/articleDetails.css">
+</head>
+<body>
+	<include file="Public/head" />
+	<div class="container">
+		<div class="urls">
+			<small>
+			当前位置：<a href="{:U('Home/Index/index')}"><i class="icon-home"></i>&nbsp;网站首页</a>
+			&nbsp;&nbsp;/&nbsp;&nbsp;
+			<a href="{:U('Home/Article/articlelist')}"><i class="icon-list-alt"></i>&nbsp;文章列表</a>
+			&nbsp;&nbsp;/&nbsp;&nbsp;
+			<a href="javascript:;"><i class="icon-bookmark"></i>&nbsp;文章题目</a>
+			</small>
+		</div>
+		<div class="articleCon">
+			<p class="articleTitle">{$TheArticle.title}</p>
+			<p class="articleTag">
+				<i class="icon-tag"></i><small>&nbsp;&nbsp;{$TheArticle.keyword}</small>&nbsp;&nbsp;
+				<i class="icon-time"></i><small>&nbsp;&nbsp;{$TheArticle.addtime|date='Y-m-d H:i:s',###}</small>&nbsp;&nbsp;
+				<i class="icon-eye-open"></i><small>&nbsp;&nbsp;{$TheArticle.view}</small>&nbsp;&nbsp;
+				<i class="icon-user"></i><small>&nbsp;&nbsp;{$TheArticle.author}</small>&nbsp;&nbsp;
+			</p>
+			<div id="content">{$TheArticle.content}</div>
+		</div>
+		<div class="comments">
+			<p class="commentstitle">文章评论</p>
+			<div>
+				<ul>
+					<foreach name="Comments" item="v">
+						<if condition="$v.pid == 0">
+							<li style="border-top:1px solid gray;">
+							<input type="hidden" value="{$v.commentid}">
+							<img src="{$v.avatar}">
+							<p><i class="icon-time"></i>{$v.comtime|date="Y/m/d H:i",###}</p>
+							<p><span>{$v.nickname}</span> : {$v.content} <a href="javascript:;" class="Answer">回复</a></p>
+						<else />
+							<li style="margin-left: 40px;">
+							<input type="hidden" value="{$v.commentid}">
+							<img src="{$v.avatar}">
+							<p><i class="icon-time"></i>{$v.comtime|date="Y/m/d H:i",###}</p>
+							<p><span>{$v.nickname}</span>@{$v.to} : {$v.content} <a href="javascript:;" class="Answer">回复</a></p>
+						</if>
+						</li>
+					</foreach>
+				</ul>
+			</div>
+		</div>
+		<div class="comment">
+			<h4>发表评论</h4>
+			<form action="javascript:;" method="post" accept-charset="utf-8" id="makeCommentForm">
+				<input type="hidden" name="articleid" value="{$TheArticle.articleid}">
+				<p><textarea name="content" placeholder="在此输入评论" id="commentCon" readonly="true"></textarea></p>
+				<p><input type="submit" name="submit"><input type="reset" name="reset"></p>
+			</form>
+		</div>
+		<div class="otherArticle">
+			<p><a href="javascript:;">上一篇：上一篇文章的地址</a></p>
+			<p><a href="javascript:;">下一篇：下一篇文章的地址</a></p>
+		</div>
+	</div>
+	<include file="Public/foot" />
+</body>
+<script type="text/javascript">
+	let articleid = {$_GET['articleid']};
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.dialogBox.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/public.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/articleDetail.js"></script>
+</html>

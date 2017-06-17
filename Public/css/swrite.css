@@ -1,0 +1,97 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-22 14:18:40
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-06-02 21:21:04
+*/
+.main .writeArticle{
+	width: 100%;
+}
+.main .writeArticle form {
+	width: 100%;
+}
+.main .writeArticle form p{
+	width: 100%;
+	padding: 8px 0 8px 0;
+	overflow: hidden;
+}
+.main .writeArticle form p #newClassify{
+	height: 30px;
+	width: 100px;
+	border-radius: 3px;
+	border:1px solid lightgray;
+	cursor: pointer;
+	outline: none;
+}
+.main .writeArticle form p span {
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	min-width: 90px;
+	font-weight: bold;
+	padding: 0 10px 0 10px;
+}
+.main .writeArticle form p input {
+	width: 80%;
+	height: 30px;
+	border-radius: 3px;
+	border: 1px solid lightgray;
+	padding: 0 10px 0 10px;
+}
+.main .writeArticle form p input:focus {
+	border: 1px solid lightskyblue;
+	box-shadow: 0 0 1px #66afe9;
+}
+.main .writeArticle form p label{
+	float: left;
+	padding:  0 10px 0 0px;
+	color: yellowgreen;
+	transition: color .25s linear;
+	cursor: pointer;
+}
+.main .writeArticle form p label:hover{
+	color: green;
+}
+.main .writeArticle form p input[type=file]{
+	display: none;
+}
+.main .writeArticle form p input[type=radio]{
+	width: 30px;
+	height: 30px;
+	float: right;
+	outline: noen;
+}
+.main .writeArticle form p img{
+	width: 300px;
+	height: 180px;
+}
+.main .writeArticle form p #submit, .main .writeArticle form p #reset{
+	width: 100px;
+	height: 30px;
+	margin: 0 10px 0 10px;
+	border: none;
+	transition: all .25s linear;
+	cursor: pointer;
+}
+.main .writeArticle form p select{
+	width: 80%;
+	height: 30px;
+	border: 1px solid lightgray;
+}
+.main .writeArticle form p #submit{
+	background: yellowgreen;
+}
+.main .writeArticle form p #submit:hover{
+	background: greenyellow;
+}
+.main .writeArticle form p #reset{
+	background: lightcoral;
+}
+.main .writeArticle form p #reset:hover{
+	background:#e65858;	
+}
+
+.main .asdf {
+	color: red;
+}

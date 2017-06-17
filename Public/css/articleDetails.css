@@ -1,0 +1,212 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-10 23:49:23
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-06-10 13:11:41
+*/
+/**
+ * 当前位置
+ */
+.urls{
+	width: 100%;
+	background: white;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.urls small a{
+	color: yellowgreen;
+	transition: color .25s linear;
+}
+.urls small a:hover{
+	color: green;
+}
+/**
+ * 文章内容
+ */
+.articleCon{
+	width: 65%;
+	background: white;
+	float: left;
+	overflow: hidden;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.articleCon .articleTitle{
+	font-size: 24px;
+	text-align: center;
+}
+.articleCon .articleTag{
+	text-align: right;
+	color: yellowgreen;
+	font-size: 12px;
+}
+.articleCon #content{
+	padding:15px 0;
+}
+/**
+ * comments
+ */
+.comments{
+	width: 34%;
+	overflow: hidden;
+	background: white;
+	float: right;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.comments .commentstitle{
+	font-size: 20px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px dashed gray;
+	margin-bottom: 10px;
+}
+.comments img{
+	border-radius: 50%;
+	float: left;
+	margin-right: 3px;
+}
+.comments ul li {
+	line-height: 40px;
+	padding:7px 0;
+}
+.comments ul li p{
+	line-height: 20px;
+	word-break:break-all;
+}
+.comments ul li a{
+	color: yellowgreen;
+	transition: color .25s linear;
+	line-height: 20px;
+}
+.comments ul li a:hover{
+	color: green;
+}
+.comments ul li input{
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border:1px solid lightgray;
+	padding:0 10px;
+	border-radius:3px;
+	transition:border .25s linear;
+}
+.comments ul li input:focus{
+	border: 1px solid lightskyblue;
+	box-shadow: 0 0 2px #66afe9;
+}
+.comments ul li .answerComment{
+	color: yellowgreen;
+	transition:color .25s linear;
+	padding:0 5px;
+}
+.comments ul li .answerComment:hover{
+	color:green;
+}
+.comments ul li .answerCancel{
+	color:#FCC994;
+	padding:0 5PX;
+	transition: color .25s linear;
+}
+.comments ul li .answerCancel:hover{
+	color:#FAA54B;
+}
+@media screen and (max-width: 900px) {
+	/**
+	 * 文章内容
+	 */
+	.articleCon{
+		width: 100%;
+	}
+	/**
+	 * comments
+	 */
+	.comments{
+		width: 100%;
+	}
+}
+/**
+ * 其他文章
+ */
+.otherArticle{
+	width: 100%;
+	clear: both;
+	background: white;
+	padding: 15px;
+	font-size: 12px;
+
+}
+.otherArticle p a{
+	display: inline-block;
+	line-height: 25px;
+	color: yellowgreen;
+	transition: color .25s linear;
+}
+.otherArticle p a:hover{
+	color: green;
+}
+/**
+ *评论
+ */
+.comment{
+	background: white;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	clear: both;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.comment h4 {
+	padding: 10px 0 10px 0;
+	font-size: 20px;
+	border-bottom: 1px dashed gray;
+}
+.comment form{
+	width: 100%;
+}
+.comment form p{
+	width: 100%;
+	padding: 8px;
+}
+.comment form p input[type=text]{
+	width: 75%;
+	height: 35px;
+	padding: 6px 12px 6px 12px;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	transition: border .25s linear;
+	cursor: not-allowed;
+}
+.comment form p input[type=text]:focus, .comment form p textarea:focus{
+	border: 1px solid lightskyblue;
+	box-shadow: 0 0 2px #66afe9;
+}
+.comment form p textarea{
+	width: 75%;
+	padding: 6px 12px 6px 12px;
+	height: 70px;
+	resize: none;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+.comment form p input[type=submit], .comment form p input[type=reset]{
+	width: 60px;
+	height: 25px;
+	margin: 0 10px 0 10px;
+	border: none;
+	cursor: pointer;
+}
+.comment form p input[type=submit]{
+	background: #C7FC86;
+	transition: background .25s linear;
+}
+.comment form p input[type=submit]:hover{
+	background: #A3FD3B;
+}
+.comment form p input[type=reset]{
+	transition: background .25s linear;
+	background: #FCC994;
+}
+.comment form p input[type=reset]:hover{
+	background: #FAA54B;
+}

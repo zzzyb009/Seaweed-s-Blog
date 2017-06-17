@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Seaweed's web</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Public.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/articles.css">
+</head>
+<body>
+	<include file="Public/head" />
+	<div class="container">
+		<div class="urls">
+			<small>当前位置：<a href="{:U('Home/Index/index')}"><i class="icon-home"></i>&nbsp;网站首页</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="javascript:;"><i class="icon-list-alt"></i>&nbsp;文章列表</a></small>
+		</div>
+		<div class="clasifys">
+			<h3>文章分类</h3>
+			<ul>
+				<foreach name="ArticleClassify" item="v">
+					<li><a href="{:U('Home/Article/articleList',array('classify' => $v['classify']))}">{$v.classify}<span class="num">共有{$v.num}篇</span></a></li>
+				</foreach>
+			</ul>
+		</div>
+		<div class="articlelist">
+			<h4>文章列表</h4>
+			<!-- <h4>文章列表<small><a href="javascript:;">按时间</a></small><small><a href="javascript:;">按浏览量</a></small></h4> -->
+			<ul>
+				<foreach name="Articles" item="v">
+					<li>
+						<p class="articletitle">
+						<if condition="$v.orignal == 1">【原创】
+						<else />【非原创】
+						</if>
+						<a href="{:U('Home/Article/articledetail',array('articleid' => $v['articleid']))}">{$v.title}</a></p>
+						<div class="articleimg">
+							<a href="{:U('Home/Article/articledetail',array('articleid' => $v['articleid']))}">
+								<div class="bgimg" style="background-image: url('{$v.img}');"></div>
+							</a>
+						</div>
+						<div class="articleinfo">
+							{$v.summary}
+						</div>
+						<p class="articletag">
+							<i class="icon-tag"></i><small>{$v.keyword}</small>
+							<i class="icon-time"></i><small>{$v.addtime|date="Y-m-d H:i:s",###}</small>
+							<i class="icon-eye-open"></i><small>{$v.view}</small>
+							<small class="readmore"><a href="{:U('Home/Article/articledetail',array('articleid' => $v['articleid']))}">阅读全文<i class="icon-arrow-right"></i></a></small>
+						</p>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+		<!-- <div class="message">
+			<h3>留言板</h3>
+			<ul>
+				<li>
+					<a href="javascript:;"><img src="__PUBLIC__/images/logo.jpeg"></a>
+					<div><i class="icon-comments-alt"></i>Seaweed&nbsp;<i class="icon-time"></i>2017-05-07</div>
+					<div><a href="javascript:;">随便说点什么</a></div>
+				</li>
+				<li>
+					<img src="__PUBLIC__/images/logo.jpeg">
+					<div><i class="icon-comments-alt"></i>Seaweed&nbsp;<i class="icon-time"></i>2017-05-07</div>
+					<div><a href="javascript:;">随便说点什么</a></div>
+				</li>
+				<li>
+					<img src="__PUBLIC__/images/logo.jpeg">
+					<div><i class="icon-comments-alt"></i>Seaweed&nbsp;<i class="icon-time"></i>2017-05-07</div>
+					<div><a href="javascript:;">随便说点什么</a></div>
+				</li>
+			</ul>
+		</div> -->
+		<div class="links">
+			<h3>碎碎念</h3>
+			<ul>
+				<li><a href="javascript:;"><i class="icon-link"></i>我有一只小毛驴，我从来也不骑，有一天我心血来潮绮他去看戏~~~ </a></li>
+			</ul>
+		</div>
+	</div>
+	<include file="Public/foot" />
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.dialogBox.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/public.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/articles.js"></script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Seaweed's web</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/sindex.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.dialogBox.css">
+</head>
+<body>
+	<div class="container">
+		<h4><img src="{$Weblogo}" id="topLogo"><a href="javascript:;" id="WebName">{$Webinfo}</a> Management Center<span>Welcome,&nbsp;<i class="icon-user"></i>{$Think.session.uname}<a href="javascript:;" id="Logout">Logout</a></span></h4>
+		<div class="meuns">
+			<ul>
+				<li id="WebInfo"><a href="#WebInfo"><i class="icon-bar-chart"></i>站点数据</a></li>
+				<li id="webIndex"><a href="{:U('Home/index/index')}" target="_blank"><i class="icon-home"></i>前端首页</a></li>
+				<li id="ArticleList"><a href="#ArticleList"><i class="icon-file"></i>文章列表</a></li>
+				<li id="WriteArticle"><a href="#WriteArticle"><i class="icon-edit"></i>发表文章</a></li>
+				<li id="ArticleClassify"><a href="#ArticleClassify"><i class="icon-bookmark-empty"></i>文章类别管理</a></li>
+				<li id="MessageManagement"><a href="#MessageManagement"><i class="icon-comments"></i>留言管理</a></li>
+				<li id="UserManager"><a href="#UserManager"><i class="icon-group"></i>用户管理</a></li>
+				<li id="VersionList"><a href="#VersionList"><i class="icon-smile"></i>版本列表</a></li>
+			</ul>
+		</div>
+		<!-- 加载其他页面的内容 -->
+		<div id="content">
+			
+		</div>
+		<div id="btn-dialogBox"></div>
+		<div id="dialog-content" class="none"></div>
+		<div id="simple-dialogBox" class="none"></div>
+	</div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	// index.html
+	let WebInfo = "{:U('Admin/Datas/datas')}"
+	let ArticleList = "{:U('Admin/Article/articlel')}"
+	let WriteArticle = "{:U('Admin/Article/articlew')}"
+	let ArticleClassify = "{:U('Admin/Article/articlec')}"
+	let MessageManagement = "{:U('Admin/Message/messageMan')}"
+	let UserManager = "{:U('Admin/User/userMan')}"
+	let VersionList = "{:U('Admin/Version/versionList')}"
+	let logout = "{:U('Admin/Login/logout')}"
+	let Login = "{:U('Admin/Login/login')}";
+	// writeArticle.html
+    let ArticleUrl = "{:U('Admin/Article/articleAdd')}";
+    // datas.html
+	let ChangeNameUrl = "{:U('Admin/Datas/change')}"
+	let LogoUrl = "{:U('Admin/Datas/logo')}"
+	// ArticleClassify.html
+	let ChangeClassifyUrl = "{:U('Admin/Article/changeClassify')}";
+	// ArticleList.html
+	let getArticleUrl = "{:U('Admin/Article/getArticleCon')}";
+	let SaveArticleUrl = "{:U('Admin/Article/saveArticle')}"
+	// userMan.html
+	let AddAdminUrl = "{:U('Admin/User/addAdmin')}";
+	let DeleteAdminUrl = "{:U('Admin/User/deleteAdmin')}";
+	let UpdataAdminUrl = "{:U('Admin/User/updateAdmin')}";
+	// version.html
+	let NewVersionUrl = "{:U('Admin/Version/publishNewVersion')}"
+	// message.html
+	let answerMessageUrl = "{:U('Admin/Message/answerMessage')}"
+	let deleteMessageUrl = "{:U('Admin/Message/deleteMessage')}"
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.dialogBox.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sroot.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sindex.js"></script>
+</html>

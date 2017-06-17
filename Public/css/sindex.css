@@ -1,0 +1,92 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-13 11:34:30
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-05-27 18:33:49
+*/
+.container{
+	width: 100%;
+	min-width: 1000px;
+}
+/**
+ * 标题栏
+ */
+.container h4{
+	width: 100%;
+	background: #292929;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 15px 0 15px;
+	color: yellowgreen;
+	position: fixed;
+	z-index: 2;
+}  
+.container h4 img{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	float: left;
+	border-radius: 50%;
+}
+.container h4 span{
+	float: right;
+}
+.container h4 #WebName {
+	color: yellowgreen;
+	font-size: 20px;
+}
+.container h4 span a {
+	display: inline-block;
+	height: 60px;
+	padding: 0 10px 0 10px;
+	margin: 0 10px 0 10px;
+	background: lightsteelblue;
+}
+.container h4 span a:hover{
+	transition: all .25s linear;
+	background: lightskyblue;
+}
+/**
+ * 菜单栏
+ */
+.meuns {
+	background: white;
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	/* background: #3C3C3C; */
+	background: #22252B;
+	font-size: 14px;
+	padding-top: 60px;
+	z-index: 1;
+}
+.meuns h4{
+	background: #B0C4DE;
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+}
+.meuns a {
+	/* color: #A3A3A3; */
+	color: yellowgreen;
+	text-indent: 15px;
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0 10px 0;
+	transition: background .2s linear;
+}
+.meuns a:hover{
+	background: #32363E;
+}
+.active{
+	background: #32363E;
+}
+.meuns a i{
+	text-indent: 0;
+	padding: 0 5px 0 5px;
+}
+.container #content{
+	width: 100%;
+	padding-left: 200px;
+	padding-top: 60px;
+}

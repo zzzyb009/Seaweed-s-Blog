@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Seaweed's web</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.dialogbox.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/sarticleClassify.css">
+</head>
+<body>
+	<div class="main">
+		<h3><i class="icon-bookmark-empty"></i>文章类别管理</h3>
+		<div class="articleClassifyList">
+			<ul>
+			<foreach name="ArticleC" item="v">
+				<li><i class="icon-circle-blank"></i><strong>{$v.classify}</strong><span>现有文章{$v.num}篇</span><span class="edit"><a href="javascript:;"><i class="icon-edit"></i>编辑分类</a></span><span class="delete"></li>
+			</foreach>
+			</ul>
+		</div>
+		<!-- <h3><i class="icon-cog"></i>新增分类</h3>
+		<div class="addClassify">
+			<form action="javascript:;" method="get" accept-charset="utf-8">
+				<p><span>新增分类</span><input type="text" name="newClassify"><input type="submit" value="确认"><input type="reset" value="取消"></p>
+			</form>
+		</div> -->
+	</div>
+<!-- 		<div id="dialog-content" class="none"></div>
+		<div id="simple-dialogBox" class="none"></div> -->
+</body>
+<script type="text/javascript">
+	// let changeClassifyurl = "{:U('Admin/Article/changeClassify')}";
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.dialogBox.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sarticleClassify.js"></script>
+</html>

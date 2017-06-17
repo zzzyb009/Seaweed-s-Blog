@@ -1,0 +1,80 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-22 17:02:45
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-05-24 18:32:53
+*/
+/**
+ * 分类列表
+ */
+.main .articleClassifyList ul li{
+	padding: 8px 0 8px 0;
+}
+.main .articleClassifyList ul li span {
+	padding: 0 20px 0 20px;
+}
+.main .articleClassifyList ul li .edit, .main .articleClassifyList ul li .delete{
+	float: right;
+	transition: all .25s linear;
+}
+.main .articleClassifyList ul li .edit a{
+	color: yellowgreen;
+}
+.main .articleClassifyList ul li .edit a:hover{
+	color: green;
+}
+.main .articleClassifyList ul li .delete a{
+	color: lightcoral;
+}
+.main .articleClassifyList ul li .delete a:hover{
+	color: #e65858;
+}
+/* 新增分类 */
+.main .addClassify form p span{
+	padding: 0 10px 0 10px;
+}
+.main .addClassify form p input[type=text]{
+	border: 1px solid lightgray;
+	height: 30px;
+	width: 50%;
+	padding: 0 0 0 10px;
+	transition: all .25s linear;
+}
+.main .addClassify form p input[type=text]:focus{
+	border: 1px solid lightskyblue;
+	box-shadow: 0 0 1px #66afe9;
+}
+.main .addClassify form p input[type=submit],.main .addClassify form p input[type=reset]{
+	height: 30px;
+	width: 60px;
+	margin: 0 0px 0 10px;
+	border: none;
+	transition: background .25s linear;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.main .addClassify form p input[type=submit]{
+	background: yellowgreen;
+}
+.main .addClassify form p input[type=submit]:hover{
+	background: greenyellow;
+}
+.main .addClassify form p input[type=reset]{
+	background: lightcoral;
+}
+.main .addClassify form p input[type=reset]:hover{
+	background: #e65858;
+}
+/* 弹窗部分修改样式 */
+section .changeClassify{
+	border: none;
+	border-bottom: 1px solid #CAD5E2;
+	width: 100%;
+	transition: all .25s linear;
+	text-align: center;
+	color: #CAD5E2;
+}
+section .changeClassify:focus{
+	border-bottom: 1px solid gray;
+	color: gray;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Seaweed's web</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/sversionList.css">
+</head>
+<body>
+	<div class="main">
+		<h3><i class="icon-smile"></i>版本信息列表</h3>
+		<div class="versionList">
+			<ul>
+				<foreach name="versionInfo" item="v">
+					<li>
+						<p><span>版本序号</span><span>{$v.versionid}</span></p>
+						<p><span>更新次数</span><span>第{$v.versiontimes}次更新</span></p>
+						<p><span>更新内容</span><span>{$v.content}</span></p>
+						<p><i class="icon-user"></i>发布人：{$v.publisher}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-time"></i>发布时间：{$v.publishtime|date='Y-m-d H:i:s',###}</p>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+		<h3><i class="icon-smile"></i>发布新版本</h3>
+		<div class="newVersion">
+			<form action="javascript:;" method="post" accept-charset="utf-8" id="newVersionForm">
+				<p><span>当前版本号</span><input type="text" readonly="true" style="cursor:not-allowed;" value="{$versionid}"></p>
+				<p><span>新版版本号</span><input type="text" name="versionid" placeholder="v x.x.x"></p>
+				<p><span>更新内容</span><textarea name="content"></textarea></p>
+				<p><span>发布人</span><input type="text" name="publisher" value="{$Think.session.uname}" readonly="true" style="cursor:not-allowed;"></p>
+				<p><input type="submit" name="submit" value="发布"><input type="reset" name="reset" value="取消"></p>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sversion.js"></script>
+</html>

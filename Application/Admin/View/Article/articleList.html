@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Seaweed's web</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/initialize.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/sarticleList.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/swrite.css">
+</head>
+<body>
+	<div class="main">
+		<h3><i class="icon-file"></i>文章列表</h3>
+		<div class="articleList">
+			<ul>
+				<foreach name='list' item='v'>
+					<li><a href="javascript:;"><input type="hidden" name="articleid" value="{$v.articleid}"><i class="icon-circle"></i>{$v.title}</a></li>
+				</foreach>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.dialogBox.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sarticleList.js"></script>
+</html>

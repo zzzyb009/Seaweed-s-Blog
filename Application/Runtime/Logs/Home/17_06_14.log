@@ -1,0 +1,105 @@
+[ 2017-06-14T13:37:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.055823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.047952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048287s ]
+SQL: SHOW COLUMNS FROM `s_webinfo` [ RunTime:1.0277s ]
+SQL: SELECT * FROM `s_webinfo`  [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `s_comment` [ RunTime:0.2017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_comment` LIMIT 1   [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `s_message` [ RunTime:0.0991s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_message` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `s_article` [ RunTime:0.1223s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_article` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `s_frilinks` [ RunTime:0.1319s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_frilinks` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant articleid - assumed 'articleid' D:\wamp64\www\Application\Home\Controller\IndexController.class.php 第 22 行.
+SQL: SELECT MAX(articleid) AS tp_max FROM `s_article` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `s_article` WHERE `articleid` = 1497173364  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `s_article` WHERE ( articleid<1497173364 ) ORDER BY articleid desc  [ RunTime:0.0594s ]
+SQL: SELECT count(*) AS `num`,`classify` FROM `s_article` GROUP BY classify  [ RunTime:0.0394s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.729325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.729771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.018407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013888s ]
+
+[ 2017-06-14T13:37:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+SQL: SHOW COLUMNS FROM `s_webinfo` [ RunTime:0.1197s ]
+SQL: SELECT * FROM `s_webinfo`  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `s_comment` [ RunTime:0.0614s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_comment` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `s_message` [ RunTime:0.0359s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_message` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `s_article` [ RunTime:0.0223s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_article` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `s_frilinks` [ RunTime:0.0551s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_frilinks` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant articleid - assumed 'articleid' D:\wamp64\www\Application\Home\Controller\IndexController.class.php 第 22 行.
+SQL: SELECT MAX(articleid) AS tp_max FROM `s_article` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `s_article` WHERE `articleid` = 1497173364  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `s_article` WHERE ( articleid<1497173364 ) ORDER BY articleid desc  [ RunTime:0.0009s ]
+SQL: SELECT count(*) AS `num`,`classify` FROM `s_article` GROUP BY classify  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000350s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002580s ]
+
+[ 2017-06-14T13:37:32+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `s_webinfo` [ RunTime:0.0409s ]
+SQL: SELECT * FROM `s_webinfo`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `s_comment` [ RunTime:0.0169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_comment` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `s_message` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_message` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `s_article` [ RunTime:0.0143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_article` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `s_frilinks` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `s_frilinks` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant articleid - assumed 'articleid' D:\wamp64\www\Application\Home\Controller\IndexController.class.php 第 22 行.
+SQL: SELECT MAX(articleid) AS tp_max FROM `s_article` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `s_article` WHERE `articleid` = 1497173364  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `s_article` WHERE ( articleid<1497173364 ) ORDER BY articleid desc  [ RunTime:0.0006s ]
+SQL: SELECT count(*) AS `num`,`classify` FROM `s_article` GROUP BY classify  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000468s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.148876s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001917s ]
+

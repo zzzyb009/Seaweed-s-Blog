@@ -1,0 +1,278 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-06 22:44:56
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-06-10 20:56:39
+*/
+/**
+ * 最新文章
+ */
+.container .recent {
+	margin: 15px 0 15px 0;
+	background: white;
+	padding: 15px;
+}
+.container .recent h3{
+	font-size: 20px;
+	font-weight: lighter;
+	padding: 10px 0 10px 0;
+}
+.container .recent div img{
+	margin: 10px auto;
+	display: block;
+	max-height:300px;
+	/* height: 100%; */
+	width: 100%;
+	overflow: hidden;
+}
+.container .recent .recent-title{
+	margin-left: 15px;
+	color: lightskyblue;
+}
+.container .recent .readmore{
+	color: green;
+	font-weight: 100;
+	text-align: right;
+	font-size: 13px;
+}
+.container .recent .readmore:hover{
+	transition: color .25s linear;
+	color: yellowgreen;
+}
+/* 文章列表 */
+.container .articlelist {
+	margin: 0 0 15px 0;
+	padding: 15px;
+	background: white;
+	width: 74%;
+	overflow: hidden;
+	float: left;
+}
+.container .articlelist h4{
+	font-size: 20px;
+	font-weight: lighter;
+	padding: 10px 0 10px 0;
+	border-bottom: 1px dashed gray;
+}
+.container .articlelist ul li{
+	padding: 10px 0 10px 0;
+	border-bottom: 1px dashed gray;
+}
+/* 文章列表标题 */
+.container .articlelist ul li .articletitle{
+	padding: 5px 0 5px 0;
+	color: yellowgreen;
+}
+/* 文章列表图片 */
+.container .articlelist ul li .articleimg {
+	height: 200px;
+	width: 40%;
+	float: left;
+	overflow: hidden;
+}
+.container .articlelist ul li .articleimg a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.container .articlelist ul li .articleimg a div{
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* 文章列表简介 */
+.container .articlelist ul li .articleinfo {
+	width: 58%;
+	font-size: 14px;
+	float: right;
+}
+/* 文章列表标签及查看更多 */
+.container .articlelist ul li .articletag{
+	position: relative;
+	padding-top: 5px;
+	font-size: 12px;
+	clear: left;
+	color: gray;
+}
+.container .articlelist ul li .articletag small{
+	padding: 0 5px 0 5px;
+}
+.container .articlelist ul li .articletag .readmore a{
+	position: absolute;
+	color: yellowgreen;
+	right: 0;
+}
+.container .articlelist ul li .articletag .readmore a:hover {
+	color: green;
+}
+/**
+ * 文章分类
+ */
+.container .clasify{
+	width: 25%;
+	overflow: hidden;
+	background: white;
+	float: right;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.container .clasify h3 {
+	padding: 10px 0 10px 0;
+	border-bottom: 1px dashed gray;
+}
+.container .clasify ul li {
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	padding: 8px 0 8px 0;
+}
+.container .clasify ul li a{
+	display: inline-block;
+	overflow: hidden;
+}
+.container .clasify ul li .num{
+	position: absolute;
+	right: 0;
+}
+/* 留言 */
+.container .message{
+	/* margin-top: 15px; */
+	width: 25%;
+	overflow: hidden;
+	background: white;
+	float: right;
+	padding: 15px;
+}
+.container .message h3 {
+	padding: 10px 0 10px 0;
+	border-bottom: 1px dashed gray;
+}
+.container .message ul li {
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	font-size: 12px;
+	border-bottom: 1px dashed gray;
+}
+.container .message ul li img {
+	padding: 5px;
+	display: block;
+	float: left;
+	height: 100%;
+	border-radius: 50%;
+}
+.container .message ul li div{
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	width: 100%;
+}
+.container .message ul li div:first-of-type{
+	color: orange;
+}
+.container .message ul li div a{
+	color: yellowgreen;
+}
+.container .message ul li div a:hover{
+	color: lightgreen;
+}
+/* 连接 */
+.container .links{
+	width: 25%;
+	height: auto;
+	background: white;
+	float: right;
+	padding: 15px;
+}
+.container .links h3 {
+	padding: 10px 0 10px 0;
+	border-bottom: 1px dashed gray;
+}
+.container .links ul li {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.container .links ul li a{
+	float: left;
+	word-break: break-all;
+	width: 100%;
+	padding: 8px 0 8px 0;
+	color: lightskyblue;
+	display: inline-block;
+}
+.container .links ul li a:hover{
+	transition: color .2s linear;
+	color: yellow;
+}
+
+
+@media screen and (max-width: 960px) and (min-width: 700px){
+	.container .articlelist{
+		width: 65%;
+	}
+	.container .clasify, .container .message, .container .links{
+		width: 34%;
+	}
+	.container .articlelist ul li .articleimg{
+		width: 50%;
+	}
+	.container .articlelist ul li .articleinfo{
+		width: 48%;
+	}
+}
+@media screen and (max-width: 700px) and (min-width: 500px){
+	.container .articlelist{
+		width: 100%;
+	}
+	.container .clasify{
+		width: 100%;
+	}
+	.container .message{
+		width: 49%;
+		float: left;
+	}
+	.container .links{
+		width: 49%;
+		float: right;
+	}
+	.container .articlelist ul li .articleimg{
+		width: 100%;
+		float: none;
+	}
+	.container .articlelist ul li .articleinfo{
+		width: 100%;
+		float: none;
+	}
+}
+@media screen and (max-width: 500px){
+	.container .articlelist{
+		width: 100%;
+	}
+	.container .clasify, .container .message, .container .links{
+		width: 100%;
+	}
+	.container .articlelist ul li .articleimg{
+		width: 100%;
+		float: none;
+	}
+	.container .articlelist ul li .articleinfo{
+		width: 100%;
+		float: none;
+	}
+}
+@media screen and (max-width: 900px) and (min-width: 700px){
+	.container .articlelist ul li .articleimg{
+		width: 100%;
+		max-height: 180px;
+		float: none;
+	}
+	.container .articlelist ul li .articleinfo{
+		width: 100%;
+		float: none;
+	}
+}

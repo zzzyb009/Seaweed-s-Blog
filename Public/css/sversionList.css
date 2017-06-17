@@ -1,0 +1,73 @@
+/*
+* @Author: zyb
+* @Date:   2017-05-24 14:26:50
+* @Last Modified by:   zyb
+* @Last Modified time: 2017-05-24 15:11:43
+*/
+/* 版本列表 */
+.main .versionList ul li {
+	margin: 10px 0;
+	border: 1px solid lightgray;
+}
+.main .versionList ul li p{
+	font-size: 12px;
+	padding: 10px;
+}
+.main .versionList ul li p:last-child{
+	color: yellowgreen;
+}
+.main .versionList ul li p span:first-child{
+	width: 80px;
+	text-align: center;
+	display: inline-block;
+}
+/* 发布新版本 */
+.main .newVersion form p{
+	font-size: 12px;
+	padding: 5px;
+}
+.main .newVersion form p span{
+	display: inline-block;
+	float: left;
+	line-height: 30px;
+	width: 100px;
+	text-align: center;
+}
+.main .newVersion form p input{
+	height: 30px;
+	width: 50%;
+	padding: 0 10px;
+}
+.main .newVersion form p textarea{
+	max-width: 1000px;
+	max-height: 150px;
+	width: 50%;
+	height: 50px;
+	padding: 10px;
+	border-radius: 3px;
+}
+.main .newVersion form p input:focus,.main .newVersion form p textarea:focus{
+	border: 1px solid lightskyblue;
+	box-shadow: 0 0 1px #66afe9;
+}
+.main .newVersion form p input[type=submit],.main .newVersion form p input[type=reset]{
+	width: 50px;
+	height: 30px;
+	border-radius: 3px;
+	border: none;
+	transition: background .25s linear;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.main .newVersion form p input[type=submit]{
+	background: yellowgreen;
+}
+.main .newVersion form p input[type=submit]:hover{
+	background: greenyellow;
+}
+.main .newVersion form p input[type=reset]{
+	background: lightcoral;
+}
+.main .newVersion form p input[type=reset]:hover{
+	background: #e65858;
+}
